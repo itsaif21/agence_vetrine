@@ -1,0 +1,234 @@
+<!--
+    Vitrine Web pour l'Agence SALAKTA VOYAGES
+    Fichier HTML unique utilisant Tailwind CSS pour un design moderne et responsive.
+    Hébergement recommandé : GitHub Pages, Netlify ou Vercel.
+--><html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salakta Voyages - Votre Agence vers la Tunisie</title>
+    <!-- Chargement de Tailwind CSS via CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuration de la police Inter (par défaut dans Tailwind) */
+        :root {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Définition des couleurs basées sur le logo (Bleu/Or) */
+        .color-primary { color: #1e3a8a; } /* Bleu foncé */
+        .bg-primary { background-color: #1e3a8a; }
+        .bg-accent { background-color: #f59e0b; } /* Orange/Or */
+        /* Style pour les cartes de service */
+        .card {
+            @apply bg-white p-6 rounded-xl shadow-lg transition-transform duration-300 hover:shadow-2xl hover:-translate-y-1;
+        }
+        /* Animation pour le bouton de contact pour attirer l'attention */
+        @keyframes pulse-once {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+        .animate-pulse-once {
+            animation: pulse-once 2s ease-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Bannière / Header --><header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo de l'Agence Salakta Voyages --><div class="flex items-center">
+                <!-- IMPORTANT: Assurez-vous que l'image 'logo sal.png' est dans le même dossier pour l'affichage --><img src="logo sal.png" alt="Logo Salakta Voyages" class="h-10 md:h-12" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/150x50/1e3a8a/ffffff?text=SALAKTA+VOYAGES'">
+            </div>
+            
+            <!-- Bouton de Contact Principal --><a href="#contact" class="bg-accent text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300 animate-pulse-once">
+                Contactez-nous
+            </a>
+        </div>
+    </header>
+
+    <!-- Section Héros MODIFIÉE AVEC VOTRE IMAGE --><section class="py-20 md:py-28 relative overflow-hidden text-white">
+        <!-- VOTRE IMAGE DE FAÇADE ICI --><div class="absolute inset-0 bg-cover bg-center" 
+             style="background-image: url('agence_facade.png');">
+        </div>
+        
+        <!-- Superposition sombre pour assurer la lisibilité du texte blanc --><div class="absolute inset-0 bg-black opacity-30"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 uppercase tracking-wider text-yellow-400 drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+                SALAKTA
+            </h1>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 uppercase tracking-wider text-blue-400 drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+                 VOYAGES
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-8 max-w-3xl mx-auto">
+                Votre partenaire de confiance pour des : Billets, Hôtels, et Séjours Sur-Mesure.
+            </p>
+            <a href="#services" class=" text-black text-primary font-bold py-3 px-8 rounded-full text-lg shadow-xl hover:bg-white -100 transition duration-300">
+                Découvrir nos Services
+            </a>
+        </div>
+    </section>
+
+    <!-- Section Services (Billetterie & Booking) --><section id="services" class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center color-primary mb-12">Nos Services Essentiels vers la Tunisie</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Bloc Billetterie --><div class="card bg-blue-50 border-t-4 border-primary">
+                    <h3 class="text-2xl font-semibold text-primary mb-4 flex items-center">
+                        <!-- Icône Transport --><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-accent" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 2a.75.75 0 00-1.5 0v1.432l-2.072 1.353a.75.75 0 00-.095 1.157l1.71 1.71-3.344 3.344a.75.75 0 000 1.06l1.06 1.06a.75.75 0 001.06 0l3.344-3.344 1.71 1.71a.75.75 0 001.157-.095l1.353-2.072V14a.75.75 0 001.5 0v-2.158a.75.75 0 00-.188-.475l-4.5-4.5a.75.75 0 00-.915-.178l-1.077 1.078a.75.75 0 01-1.06 0L4.5 7.158a.75.75 0 011.06-1.06l3.344 3.344 1.71-1.71a.75.75 0 00.095-1.157l-2.072-1.353V2a.75.75 0 00-1.5 0z"/>
+                        </svg>
+                        Billetterie (Air & Mer)
+                    </h3>
+                    <p class="text-gray-600 mb-4">Réservez vos places au meilleur prix avec nos partenaires exclusifs :</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 font-medium text-sm">
+                        <!-- Compagnies Aériennes --><div class="text-center p-2 rounded-lg bg-white shadow-inner border border-gray-200">Tunisair</div>
+                        <div class="text-center p-2 rounded-lg bg-white shadow-inner border border-gray-200">Nouvelair</div>
+                        
+                        <!-- Compagnies Maritimes --><div class="text-center p-2 rounded-lg bg-white shadow-inner border border-gray-200">CTN</div>
+                        <div class="text-center p-2 rounded-lg bg-white shadow-inner border border-gray-200">GNV</div>
+                        <div class="text-center p-2 rounded-lg bg-white shadow-inner border border-gray-200">Corsica Line</div>
+                        <div class="text-center p-2 rounded-lg bg-white shadow-inner border border-gray-200">Grimaldi</div>
+                    </div>
+                </div>
+
+                <!-- Bloc Réservations Hôtelières --><div class="card bg-yellow-50 border-t-4 border-accent">
+                    <h3 class="text-2xl font-semibold text-primary mb-4 flex items-center">
+                        <!-- Icône Hôtel --><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M10 2a.75.75 0 00-1.5 0v.75H8.5a.75.75 0 000 1.5h1a.75.75 0 001.5 0h.75V2a.75.75 0 00-1.5 0zM17.25 9.25a.75.75 0 00-.75.75v5.5a.75.75 0 001.5 0v-5.5a.75.75 0 00-.75-.75zM2.75 9.25a.75.75 0 00-.75.75v5.5a.75.75 0 001.5 0v-5.5a.75.75 0 00-.75-.75zM15 5.5a.5.5 0 00-.5-.5H5.5a.5.5 0 00-.5.5V17h10V5.5z"/>
+                        </svg>
+                        Réservations Hôtels Tunisie
+                    </h3>
+                    <p class="text-gray-600 mb-4">Plus de 100 hôtels sélectionnés dans toutes les régions :</p>
+                    <ul class="space-y-2 text-left text-gray-700">
+                        <li class="flex items-center">
+                            <span class="text-accent font-bold mr-2">🏖️</span> Hôtels balnéaires (Hammamet, Sousse, Djerba)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-accent font-bold mr-2">🕌</span> Séjours culturels et Circuits
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-accent font-bold mr-2">💰</span> Offres Famille & All-Inclusive
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-accent font-bold mr-2">🏨</span> Booking instantané
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Vitrine Visuelle (Hôtels et Transport) --><section id="galerie" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Nos Partenaires et Destinations Phares</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-40">
+                
+                <!-- Hôtel 1: Sousse --><div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="hotels.png" alt="Image Hôtel Hammamet" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
+                        <p class="text-white font-semibold text-lg">Hébergement Hôtelier</p>
+                    </div>
+                </div>
+
+                <!-- Ferry --><div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="ships.png" alt="Image Ferry Méditerranée" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
+                        <p class="text-white font-semibold text-lg">Voyages en Bateau</p>
+                    </div>
+                </div>
+                
+                <!-- Avion --><div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="plane.png" alt="Image Avion" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
+                        <p class="text-white font-semibold text-lg">Billets d'Avion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact et Infos Pratiques --><section id="contact" class="py-16 md:py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center color-primary mb-12">Contactez-nous</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                
+                <!-- Téléphone et Horaires --><div class="card">
+                    <h4 class="text-xl font-bold text-primary mb-3">Téléphone & Horaires</h4>
+                    <p class="text-3xl font-extrabold text-accent mb-2">
+                        <a href="tel:+216 97 769 546" class="hover:underline">+216 97 769 546</a>
+                    </p>
+                    <p class="text-3xl font-extrabold text-accent mb-2">
+                        <a href="tel:+216 73 665 788" class="hover:underline">+216 73 665 788</a>
+                    </p>
+                    <p class="font-medium text-gray-700">
+                        **Horaires de Travail :**
+                    </p>
+                    <p class="font-medium text-gray-700">
+                        Lun. au Ven. : 08h00 - 18h00
+                    </p>
+                    <p class="font-medium text-gray-700">
+                        Samedi : 08h00 - 13h00
+                    </p>
+                </div>
+
+                <!-- Localisation (Adresse & Map) --><div class="card">
+                    <h4 class="text-xl font-bold text-primary mb-3">Notre Agence</h4>
+                    <p class="text-gray-700 font-semibold mb-4">
+                        Rue raoudha, Ksour Essef, 5180
+                        <br>
+                        Mahdia, Tunisie
+                    </p>
+                    <div>
+                    <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d374.14422471846746!2d10.997685699999998!3d35.42003884319877!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1302210002bc2a39%3A0x68aa59297ccd9b2a!2sCabinet%20docteur%20habib%20ben%20slama!5e1!3m2!1sfr!2stn!4v1761921446746!5m2!1sfr!2stn" 
+                    width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <a  href=https://maps.app.goo.gl/PK9uYEbyrD8WcM9b9 target="_blank" class="mt-2 inline-block text-accent hover:underline text-sm font-medium">Emplacement</a>
+                </div>
+                
+                <!-- Réseaux Sociaux & Email (MODIFIÉ) --><div class="card">
+                    <h4 class="text-xl font-bold text-primary mb-3">Suivez-nous & Écrivez-nous</h4>
+                    <div class="flex justify-center space-x-6 mt-4">
+                        <!-- Facebook Icon --><a href="https://www.facebook.com/sa1Lak2Ta3" target="_blank" class="text-primary hover:text-accent transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.264c-1.242 0-1.629.775-1.629 1.563V12h2.77l-.443 2.89h-2.327v6.987C18.343 21.128 22 16.991 22 12 22 6.477 17.523 2 12 2z"/>
+                            </svg>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                        <!-- Instagram Icon (FIXED) --><a href="https://www.Instagram.com/salakta.voyages" target="_blank" class="text-primary hover:text-accent transition duration-300">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2c2.716 0 3.056.01 4.122.06 1.066.05 1.79.227 2.428.47 1.426.54 2.457 1.574 2.997 2.997.243.638.42 1.362.47 2.428.05 1.066.06 1.406.06 4.122s-.01 3.056-.06 4.122c-.05 1.066-.227 1.79-.47 2.428-1.426 3.78-4.57 6.924-8.35 8.35-.638.243-1.362.42-2.428.47-1.066.05-1.406.06-4.122.06s-3.056-.01-4.122-.06c-1.066-.05-1.79-.227-2.428-.47-1.426-3.78-4.57-6.924-8.35-8.35-.243-.638-.42-1.362-.47-2.428-.05-1.066-.06-1.406-.06-4.122s.01-3.056.06-4.122c.05-1.066.227-1.79.47-2.428C3.076 3.57 6.22 3.414 12 2zm0 3.65c-3.155 0-5.71 2.555-5.71 5.71s2.555 5.71 5.71 5.71 5.71-2.555 5.71-5.71-2.555-5.71-5.71-5.71zm0 2.25c1.903 0 3.46 1.557 3.46 3.46s-1.557 3.46-3.46 3.46-3.46-1.557-3.46-3.46 1.557-3.46 3.46-3.46zm5.13-5.32c.57 0 1.03.46 1.03 1.03s-.46 1.03-1.03 1.03-1.03-.46-1.03-1.03.46-1.03 1.03-1.03z"/>
+                            </svg>s
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                        <!-- Email Icon (NEW) --><a href="mailto:salakta.voyages@gmail.com" class="text-primary hover:text-accent transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.44 4.7a1.5 1.5 0 01-1.62 0L1.5 8.67z"/>
+                                <path d="M22.5 6.33L12 12.04 1.5 6.33 12 0.62l10.5 5.71z"/>
+                            </svg>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500">
+                        
+                        <br>
+                        Email: <a href="mailto:salakta.voyages@gmail.com" class="text-accent hover:underline font-medium">salakta.voyages@gmail.com</a>
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer --><footer class="bg-primary text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Salakta Voyages. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
